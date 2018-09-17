@@ -1,0 +1,13 @@
+<div style="text-align:center;" class="thumbnail col-md-3 col-sm-3 col-lg-3" [ngClass]="place.isVisited ? 'visited-place': ''">
+  <div class="caption"><strong>{{place.name}}</strong></div>
+  <div style="text-align:center;">located in the city {{place.city}}</div>
+  <div style="text-align:center;">of {{place.country}}</div>
+  <br>
+  <div style="text-align:center;">Visited: {{IsVisited}}</div>
+  <div style="text-align:center;">Rating: {{place.rating}}</div>
+  <a (click)="toggleVisited.emit(place.name)" class="btn btn-secondary">
+    <span *ngIf="place.isVisited">Mark Not Visited</span>
+    <span *ngIf="!place.isVisited">Mark Visited</span>
+  </a>  
+  <br />
+</div>
